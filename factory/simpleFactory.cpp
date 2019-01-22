@@ -1,4 +1,5 @@
 #include <memory>
+#include <iostream>
 enum ProductType
 {
     TYPE_A,
@@ -51,7 +52,7 @@ public:
                 product = std::make_shared<ProductA>();
                 break;
             case TYPE_B:
-                product = std::make_shared<ProductA>();
+                product = std::make_shared<ProductB>();
                 break;
             default:
                 break;
@@ -59,7 +60,6 @@ public:
         return product;
     }
 };
-#include <iostream>
 int main(int argc, char** argv) {
     SimpleFactory factory;
     ProductPtr product = factory.createProduct(TYPE_A);
