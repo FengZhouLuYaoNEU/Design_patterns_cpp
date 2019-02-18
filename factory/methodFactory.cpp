@@ -67,6 +67,7 @@ public:
 int main(int argc, char** argv) {
     std::unique_ptr<Factory> fac(new ProductBFactory);
    // std::unique_ptr<Facitory> fac = std::make_unique<ProductBFactory>();//C++14
+
     ProductPtr product = fac->createProduct();
     std::cout<<"product type "<<product->getProductType()<<std::endl;
     return 0;
